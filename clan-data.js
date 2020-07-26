@@ -24,7 +24,7 @@ const clanData = {
         "name": "Nosferatu",
         "text": "Pels Nosferatu, l'Abraçada suposa acceptar l'encarnació del mal... Literalment. La Sang els deforma el cos gradualment fins convertir-los en abominacions dantesques. Tal vegada el dolor els ensenyi humiltat i compassió: els Nosferatu són els més humans dels Afillats; duuen la maledicció per fora i no pas per dins. Per a passar desapercebuts, empren la Sang per canviar la seva cara a la de les seves víctimes, o simplement es fan fonedís.",
         "logo": "assets/nosferatu-logo.png",
-        "image": "assets/Nosferatu.png",
+        "image": "assets/nosferatu.png",
         "voiceClip": "assets/Nosferatu.mp3"
     },
     "toreador": {
