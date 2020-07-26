@@ -72,11 +72,11 @@
                 : html`<h1>Escull un Clan</h1>`
     
                 return html`<div class="app-body">
-                    ${SelectedClanDisplay}
                     <${ClansList} 
                         elements=${listElements}
                         onChange=${this.selectClan}
                     />
+                    ${SelectedClanDisplay}
                 </div>
                 `;
             }
