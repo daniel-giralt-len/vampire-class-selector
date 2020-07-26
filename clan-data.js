@@ -52,12 +52,14 @@ const clanData = {
         "name": "Caitiff",
         "text": "No tots els Afillats pertànyen a un dels tretze clans. Alguns viuen entre les escletxes d'aquestes definicions; per accident o per voluntat, els Caitiff poden aprendre de hom però pertànyer enlloc. Compensen el seu poc pedigrí amb una Sang més flexible i una Ànsia i Maledicció més suportables.",
         "image": "assets/caitiff.png",
+        "logo": "assets/caitiff-logo.png",
         "voiceClip": "assets/Caitiff.mp3"
     },
     "sangFeble": {
         "name": "Sang Feble",
         "text": "Els Sang Feble, supervivents de dècades de mofes, prejudicis i ostracismes, han vingut per a quedar-se. La seva alquímia de sang, anàrquica i de carrer ja els fan versàtils. Sumant-hi a això la seva capacitat de fer-se passar per humans resultat en un vampir benaventurat per passar desapercebut dins la societat viva.",
         "image": "assets/sang-feble.png",
+        "logo": "assets/sang-feble-logo.png",
         "voiceClip": "assets/sang.mp3"
     }
 }
