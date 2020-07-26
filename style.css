@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Venetian 301';
+    src: url('./assets/Venetian301BT-Roman.otf');
+}
+
+body {
+    background-image: url('./assets/bg.png');
+    font-family: 'Venetian 301';
+    color: #FFF;
+}
+
+.app-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.clan-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.clan-list button {
+    font-family: 'Venetian 301';
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
+    color: inherit;
+    background: none;
+    padding: 0   
+}
+
+.clan-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #FFF;
+    height: 100px;
+    text-align:center;
+    width: 100px;
+}
+
+.clan-list-item img {
+    height: 100px;
+    max-width:100%;
+}

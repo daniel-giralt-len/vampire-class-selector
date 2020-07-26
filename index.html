@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>TRIA EL TEU PERSONATGE - Vampir: l'Emmascarat</title>
+    </head>
+    <body></body>
+    <script type="module">
+        import { h, Component, render } from 'https://unpkg.com/preact?module';
+        import htm from 'https://unpkg.com/htm?module';
+        import clanData from './clan-data.js'
+        let clan_index = null
+
+
+        // Initialize htm with Preact
+        const html = htm.bind(h);
+
+        function ClanDisplay(props){
+            return 'get fucked'
+        }
+
+        function ClansList(props){
+            return html`
+                <ul class="clan-list">
+                    ${props.elements.map(({label, image}) => html`
+                        <li aria-label=${label} class="clan-list-item">
+                            <button>
+                                ${
+                                    image
+                                        ? html`<img src=${image} />`
+                                        : label
+                                }
+                            </button>
+                        </li>
+                    `)}
+                </ul>`
+        }
+
+        function App () {
+            const listElements = Object
+                .values(clanData)
+                .map(({name, logo}) => {
+                    return {
+                        label: name,
+                        image: logo
+                    }
+                })
+
+            const 
+
+            return html`<div class="app-body">
+
+                <${ClansList} elements=${listElements}/>
+            </div>
+            `;
+        }
+
+        render(html`<${App}/>`, document.body);
+    </script>
+</html>

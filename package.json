@@ -1,0 +1,11 @@
+{
+  "name": "vampire_classes_selector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "daniel-giralt-len <daniel.giralt.len@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "light-server": "^2.7.0"
+  }
+}
