@@ -12,8 +12,6 @@
         import clanData from './clan-data.js'
         let clan_index = null
 
-
-        // Initialize htm with Preact
         const html = htm.bind(h);
 
         function ClanDisplay({ name, description, image, voiceClip }){
@@ -46,7 +44,7 @@
         }
 
         class App extends Component {
-            state = {selectedClanKey: 'nosferatu'}// null} //TODO: change it back
+            state = {selectedClanKey: null}
 
             selectClan = key => {
                 this.setState({selectedClanKey:key})
@@ -71,7 +69,7 @@
                     image=${selectedClanData.image}
                     voiceClip=${selectedClanData.voiceClip}
                 />` 
-                : 'Escull un Clan'
+                : html`<h1>Escull un Clan</h1>`
     
                 return html`<div class="app-body">
                     ${SelectedClanDisplay}
