@@ -7,6 +7,7 @@
     <body></body>
     <script type="module">
         import { h, Component, render } from 'https://unpkg.com/preact?module';
+        import { useState } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module';
         import htm from 'https://unpkg.com/htm?module';
         import clanData from './clan-data.js'
         let clan_index = null
@@ -15,15 +16,19 @@
         // Initialize htm with Preact
         const html = htm.bind(h);
 
-        function ClanDisplay(props){
-            return 'get fucked'
+        function ClanDisplay({ name, description, image, voiceClip }){
+            return name
         }
 
         function ClansList(props){
             return html`
                 <ul class="clan-list">
-                    ${props.elements.map(({label, image}) => html`
-                        <li aria-label=${label} class="clan-list-item">
+                    ${props.elements.map(({key, label, image}) => html`
+                        <li 
+                            aria-label=${label} 
+                            class="clan-list-item"
+                            onClick=${() => props.onChange(key)}
+                        >
                             <button>
                                 ${
                                     image
@@ -36,23 +41,43 @@
                 </ul>`
         }
 
-        function App () {
-            const listElements = Object
-                .values(clanData)
-                .map(({name, logo}) => {
-                    return {
-                        label: name,
-                        image: logo
-                    }
-                })
+        class App extends Component {
+            state = {selectedClanKey: null}
 
-            const 
+            selectClan = key => {
+                this.setState({selectedClanKey:key})
+            }
 
-            return html`<div class="app-body">
-
-                <${ClansList} elements=${listElements}/>
-            </div>
-            `;
+            render(props, state){
+                const listElements = Object
+                    .entries(clanData)
+                    .map(([key, {name, logo}]) => {
+                        return {
+                            key: key,
+                            label: name,
+                            image: logo,
+                        }
+                    })
+    
+                const selectedClanData = clanData[state.selectedClanKey]
+                const SelectedClanDisplay = selectedClanData
+                ? html`<${ClanDisplay}
+                    name=${selectedClanData.name}
+                    description=${selectedClanData.description}
+                    image=${selectedClanData.image}
+                    voiceClip=${selectedClanData.voiceClip}
+                />` 
+                : 'Escull un Clan'
+    
+                return html`<div class="app-body">
+                    ${SelectedClanDisplay}
+                    <${ClansList} 
+                        elements=${listElements}
+                        onChange=${this.selectClan}
+                    />
+                </div>
+                `;
+            }
         }
 
         render(html`<${App}/>`, document.body);

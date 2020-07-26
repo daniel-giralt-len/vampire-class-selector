@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body></body>
+    <script type="module">
+        import { h, render, Component } from 'https://unpkg.com/preact@latest?module';
+        import { useState } from 'https://cdn.pika.dev/preact/hooks';
+
+        class App extends Component {
+            state = {count : 0}
+            increment = () => this.setState(p => ({count: p.count+1}))
+            render(props, state){
+
+                return h('button', { onClick: this.increment }, `Count: ${state.count}`)
+            }
+        }
+
+        render(h(App), document.body);
+
+    </script>
+</html>
