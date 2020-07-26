@@ -18,9 +18,9 @@
 
         function ClanDisplay({ name, description, image, voiceClip }){
             return html`<div class="clan-display">
-                    <div style="grid-area: name">${name}</div>
-                    <div style="grid-area: description">${description}</div>
-                    <div style="grid-area: image"><img src=${image}/></div>
+                    <div style="grid-area: name"><h1>${name}</h1></div>
+                    <div style="grid-area: description"><p>${description}</p></div>
+                    <div class="clan-display-image-area"><img src=${image}/></div>
                 </div>`
         }
 

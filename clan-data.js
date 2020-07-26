@@ -22,7 +22,7 @@ const clanData = {
     },
     "nosferatu": {
         "name": "Nosferatu",
-        "text": "Pels Nosferatu, l'Abraçada suposa acceptar l'encarnació del mal... Literalment. La Sang els deforma el cos gradualment fins convertir-los en abominacions dantesques. Tal vegada el dolor els ensenyi humiltat i compassió: els Nosferatu són els més humans dels Afillats; duuen la maledicció per dins i no pas per fora. Per a passar desapercebuts, empren la Sang per canviar la seva cara a la de les seves víctimes, o simplement es fan fonedís.",
+        "text": "Pels Nosferatu, l'Abraçada suposa acceptar l'encarnació del mal... Literalment. La Sang els deforma el cos gradualment fins convertir-los en abominacions dantesques. Tal vegada el dolor els ensenyi humiltat i compassió: els Nosferatu són els més humans dels Afillats; duuen la maledicció per fora i no pas per dins. Per a passar desapercebuts, empren la Sang per canviar la seva cara a la de les seves víctimes, o simplement es fan fonedís.",
         "logo": "assets/nosferatu-logo.png",
         "image": "assets/Nosferatu.png",
         "voiceClip": "assets/Nosferatu.mp3"
@@ -57,7 +57,7 @@ const clanData = {
     "sangFeble": {
         "name": "Sang Feble",
         "text": "Els Sang Feble, supervivents de dècades de mofes, prejudicis i ostracismes, han vingut per a quedar-se. La seva alquímia de sang, anàrquica i de carrer ja els fan versàtils. Sumant-hi a això la seva capacitat de fer-se passar per humans resultat en un vampir benaventurat per passar desapercebut dins la societat viva.",
-        "image": "assets/sang.png",
+        "image": "assets/sang-feble.png",
         "voiceClip": "assets/sang.mp3"
     }
 }

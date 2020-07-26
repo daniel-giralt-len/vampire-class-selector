@@ -5,8 +5,11 @@
 
 body {
     background-image: url('./assets/bg.png');
+    background-size: 100% 100%;
     font-family: 'Venetian 301';
     color: #FFF;
+    font-size: 2em;
+    text-shadow: -1px 1px 0 #000, -1px -1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
 }
 
 .app-body {
@@ -57,4 +60,14 @@ body {
         "description image";
     grid-template-columns: 60% 40%;
     grid-template-areas: 20% 80%;;
+}
+
+.clan-display-image-area {
+    grid-area: image;
+    text-align: right;
+    overflow: hidden
+}
+
+.clan-display div img {
+    max-height: 500px;
 }
