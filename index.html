@@ -17,7 +17,11 @@
         const html = htm.bind(h);
 
         function ClanDisplay({ name, description, image, voiceClip }){
-            return name
+            return html`<div class="clan-display">
+                    <div style="grid-area: name">${name}</div>
+                    <div style="grid-area: description">${description}</div>
+                    <div style="grid-area: image"><img src=${image}/></div>
+                </div>`
         }
 
         function ClansList(props){
@@ -42,7 +46,7 @@
         }
 
         class App extends Component {
-            state = {selectedClanKey: null}
+            state = {selectedClanKey: 'nosferatu'}// null} //TODO: change it back
 
             selectClan = key => {
                 this.setState({selectedClanKey:key})
@@ -63,7 +67,7 @@
                 const SelectedClanDisplay = selectedClanData
                 ? html`<${ClanDisplay}
                     name=${selectedClanData.name}
-                    description=${selectedClanData.description}
+                    description=${selectedClanData.text}
                     image=${selectedClanData.image}
                     voiceClip=${selectedClanData.voiceClip}
                 />` 

@@ -41,11 +41,20 @@ body {
 
     border: 2px solid #FFF;
     height: 100px;
+    max-width: 100px;
     text-align:center;
-    width: 100px;
 }
 
 .clan-list-item img {
-    height: 100px;
-    max-width:100%;
+    max-width: 90%;
+    max-height: 90px;
+}
+
+.clan-display {
+    display: grid;
+    grid-template-areas: 
+        "name image"
+        "description image";
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 20% 80%;;
 }
